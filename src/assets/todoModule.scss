@@ -1,0 +1,44 @@
+.todo {
+    &-container {
+        @apply w-full max-w-lg flex justify-center items-center flex-col border-white/10 shadow-xl border bg-slate-50/5 backdrop-blur-lg rounded-lg p-6;
+    }
+    &-title {
+        @apply text-3xl rounded-md font-black text-white px-2 uppercase mb-4;
+    }
+    &-list {
+        @apply mt-4 w-full;
+        li {
+            @apply border-white/10 shadow-xl border bg-slate-50/30 backdrop-blur-xl rounded-lg py-3 px-6 flex gap-2;
+            span {
+                @apply flex-grow text-white;
+            }
+            button {
+                @apply w-6 h-6  flex justify-center items-center cursor-pointer rounded-md text-xs transition-all duration-150;
+                span {
+                    @apply invert brightness-0;
+                }
+                &:nth-child(3) {
+                    @apply bg-red-600 hover:bg-red-500;
+                }
+                &:nth-child(2) {
+                    @apply bg-green-700 hover:bg-green-600;
+                }
+            }
+        }
+    }
+
+    // FORM
+    &-form {
+        @apply flex w-full;
+    }
+    &-btn {
+        @apply hover:bg-violet-500 bg-violet-600 active:bg-violet-700 focus:outline-none  transition-all duration-150 text-white font-bold px-6 py-4 rounded-r-lg;
+    }
+    &-input {
+        @apply bg-white px-6 py-4 rounded-l-lg flex-grow focus:outline-none w-full;
+    }
+
+    &-total {
+        @apply gap-2 mt-4 text-white text-right flex gap-6 justify-between;
+    }
+}
